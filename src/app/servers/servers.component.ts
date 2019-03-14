@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  serverId: string;
-  serverStatus: string;
+  serverName: string;
+  isServerCreated: boolean = false;
+  servers: Array<string> = [ 'Server 1', 'Server 2' ];
 
   constructor() { }
 
@@ -16,6 +17,8 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer() {
-    console.log(`Go: serverId: ${this.serverId} and serverStatus: ${this.serverStatus}`);
+    this.isServerCreated = true;
+    this.servers.push(this.serverName);
+    console.log(`Go: serverName: ${this.serverName}`);
   }
 }
