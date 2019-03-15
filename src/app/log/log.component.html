@@ -10,4 +10,8 @@
 </table>
 <br/>
 <p>Log:</p>
-<p *ngFor="let number of numbers" [ngClass]="{ 'blue': number >= 5 }">{{ number }}</p>
+<p *ngFor="let log of logs; let i = index"
+   style="font-size: smaller"
+   [ngClass]="{ 'blue': i >= 4 }">
+  {{ log }}
+</p>

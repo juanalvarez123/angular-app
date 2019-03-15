@@ -9,8 +9,7 @@ export class LogComponent implements OnInit {
 
   shouldShowDetails: boolean = false;
   event: string = 'Display';
-  numbers: Array<number> = [];
-  count: number = 0;
+  logs: Array<string> = [];
 
   constructor() { }
 
@@ -20,6 +19,6 @@ export class LogComponent implements OnInit {
   onAddLog() {
     this.shouldShowDetails = !this.shouldShowDetails;
     this.event = this.shouldShowDetails ? 'Hide' : 'Display';
-    this.numbers.push(this.count++)
+    this.logs.push(new Date().toString());
   }
 }
