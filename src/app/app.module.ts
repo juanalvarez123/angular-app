@@ -10,6 +10,7 @@ import { ServerComponent } from "./server/server.component";
 import { ServersComponent } from './servers/servers.component';
 import { AlertComponent } from './alert/alert.component';
 import { TestFormComponent } from './test-form/test-form.component';
+import { LogComponent } from './log/log.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TestFormComponent } from './test-form/test-form.component';
     ServerComponent,
     ServersComponent,
     AlertComponent,
-    TestFormComponent
+    TestFormComponent,
+    LogComponent
   ],
   imports: [
     BrowserModule,

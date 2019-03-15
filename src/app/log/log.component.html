@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <td>
+      <button type="button" class="btn btn-primary" (click)="onAddLog()">{{ event }} details</button>
+    </td>
+    <td>
+      <p *ngIf="shouldShowDetails">Secret password: ¡?#303k303?asñd</p>
+    </td>
+  </tr>
+</table>
+<br/>
+<p>Log:</p>
+<p *ngFor="let number of numbers" [ngClass]="{ 'blue': number >= 5 }">{{ number }}</p>
