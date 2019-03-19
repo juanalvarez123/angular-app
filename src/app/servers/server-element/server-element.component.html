@@ -1,4 +1,4 @@
 <p [ngStyle]="{ 'color': getColor() }"
-   [ngClass]="{ online: status === 'online', offline: status === 'offline'}">
-  The server "{{ name }}" is {{ status }}
+   [ngClass]="{ online: element.status === 'online', offline: element.status === 'offline'}">
+  *{{ element.type }}*= The server "{{ element.name }}" is {{ element.status }}
 </p>

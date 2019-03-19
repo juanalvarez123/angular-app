@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Server} from "../shared/server.model";
 
 @Component({
   selector: 'app-servers',
@@ -7,18 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  serverName: string;
-  isServerCreated: boolean = false;
-  servers: Array<string> = [ 'Server 1', 'Server 2' ];
+  servers = [{
+    type: 'Dedicado',
+    name: 'Server 1',
+    content: 'Prod',
+    status: 'offline'
+  }];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
-  onCreateServer() {
-    this.isServerCreated = true;
-    this.servers.push(this.serverName);
-    console.log(`Go: serverName: ${this.serverName}`);
+  onRemoveServer(id: number) {
+    this.servers.splice(id, 1);
+  }
+
+  onServerAdded(serverData: Server) {
+    this.servers.push({
+      type: serverData.type,
+      name: serverData.name,
+      content: serverData.content,
+      status: serverData.status
+    })
   }
 }

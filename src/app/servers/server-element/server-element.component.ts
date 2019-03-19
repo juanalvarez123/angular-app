@@ -1,19 +1,19 @@
-import {Component, Input} from "@angular/core";
+import {Component, Input, OnInit} from "@angular/core";
+import {Server} from "../../shared/server.model";
 
 @Component({
   selector: 'app-server-element',
-  templateUrl: './server.component.html',
-  styleUrls: [ './server.component.css' ]
+  templateUrl: './server-element.component.html',
+  styleUrls: [ './server-element.component.css' ]
 })
-export class ServerComponent {
-  status: string;
-  @Input() name: string;
+export class ServerElementComponent implements OnInit {
 
-  constructor() {
-    this.status = Math.random() > 0.5 ? 'online' : 'offline';
+  @Input() element: Server;
+
+  ngOnInit() {
   }
 
   getColor() {
-    return this.status === 'online' ? 'white' : 'red';
+    return this.element.status === 'online' ? 'white' : 'red';
   }
 }

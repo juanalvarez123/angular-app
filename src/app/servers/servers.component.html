@@ -1,21 +1,13 @@
-<div class="form-group row">
+<app-cockpit (serverCreated)="onServerAdded($event)"></app-cockpit>
+<div class="row">
   <div class="col-sm-12">
-    <label>Name</label>
-    <input type="text" [(ngModel)]="serverName" class="form-control" />
-  </div>
-</div>
-<div class="form-group row">
-  <div class="col-sm-12 text-right">
-    <button class="btn btn-primary" (click)="onCreateServer()">Add new server</button>
-  </div>
-</div>
-<div *ngIf="isServerCreated" class="form-group row">
-  <div class="col-sm-12">
-    <h2>Server created !!!</h2>
-  </div>
-</div>
-<div class="row" *ngFor="let server of servers">
-  <div class="col-sm-12">
-    <app-server [name]="server"></app-server>
+    <ul class="list-group">
+      <li class="list-group-item m-1"
+          *ngFor="let server of servers, let i = index"
+          (click)="onRemoveServer(i)"
+          style=" cursor: pointer;">
+        <app-server-element [element]="server"></app-server-element>
+      </li>
+    </ul>
   </div>
 </div>
