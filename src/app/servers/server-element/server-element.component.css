@@ -1,7 +1,11 @@
 .online {
-  background-color: darkgreen;
+  background-color: greenyellow;
 }
 
 .offline {
   background-color: orange;
+}
+
+p {
+  color: dodgerblue;
 }

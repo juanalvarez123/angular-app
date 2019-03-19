@@ -1,10 +1,11 @@
-import {Component, Input, OnInit} from "@angular/core";
+import {Component, Input, OnInit, ViewEncapsulation} from "@angular/core";
 import {Server} from "../../shared/server.model";
 
 @Component({
   selector: 'app-server-element',
   templateUrl: './server-element.component.html',
-  styleUrls: [ './server-element.component.css' ]
+  styleUrls: [ './server-element.component.css' ],
+  encapsulation: ViewEncapsulation.None
 })
 export class ServerElementComponent implements OnInit {
 
@@ -14,6 +15,6 @@ export class ServerElementComponent implements OnInit {
   }
 
   getColor() {
-    return this.element.status === 'online' ? 'white' : 'red';
+    return this.element.status === 'online' ? 'green' : 'red';
   }
 }
