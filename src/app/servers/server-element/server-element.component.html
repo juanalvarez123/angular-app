@@ -1,5 +1,6 @@
-<p [ngStyle]="{ 'color': getColor() }"
-   [ngClass]="{ online: element.status === 'online', offline: element.status === 'offline'}">
-  *{{ element.type }}*= The server "{{ element.name }}" is {{ element.status }}
-</p>
-<p>New server</p>
+<div class="card">
+  <div class="card card-header">{{ element.name }}</div>
+  <div class="card card-body">
+    <ng-content></ng-content>
+  </div>
+</div>

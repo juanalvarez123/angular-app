@@ -7,7 +7,11 @@
           *ngFor="let server of servers, let i = index"
           (click)="onRemoveServer(i)"
           style=" cursor: pointer;">
-        <app-server-element [element]="server"></app-server-element>
+        <app-server-element [element]="server">
+          <p>*{{ server.type }}*= Server is {{ server.status }}</p>
+          <hr />
+          <p>{{ server.content }}</p>
+        </app-server-element>
       </li>
     </ul>
   </div>

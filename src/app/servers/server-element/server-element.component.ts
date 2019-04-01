@@ -5,16 +5,12 @@ import {Server} from "../../shared/server.model";
   selector: 'app-server-element',
   templateUrl: './server-element.component.html',
   styleUrls: [ './server-element.component.css' ],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.Native
 })
 export class ServerElementComponent implements OnInit {
 
   @Input() element: Server;
 
   ngOnInit() {
-  }
-
-  getColor() {
-    return this.element.status === 'online' ? 'green' : 'red';
   }
 }
