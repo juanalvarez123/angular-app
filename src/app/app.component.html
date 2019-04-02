@@ -1,4 +1,4 @@
-<app-header (featureSelected)="onNavigate($event)"></app-header>
+<!--<app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="form-group row">
     <div class="col-md-12">
@@ -6,7 +6,7 @@
       <app-shopping-list *ngIf="loadedFeature === 'shopping-list'"></app-shopping-list>
     </div>
   </div>
-</div>
+</div>-->
 <!--<div class="container">
   <div class="form-group row">
     <div class="col-md-12">
@@ -14,21 +14,20 @@
     </div>
   </div>
 </div>-->
-<!--
 <div class="container m-3">
   <div class="form-group row">
     <div class="col-md-12">
-      <app-game-control (sequenceEmiter)="addSequence($event)"></app-game-control>
+      <app-game-control (sequenceEmiter)="addSequence($event)" (resetGame)="onResetGame()"></app-game-control>
     </div>
   </div>
   <div class="form-group row">
-    <div class="col-md-6">
-      <p>Odd numbers</p>
-      <app-odd *ngFor="let n of oddNumbers" [n]="n"></app-odd>
-    </div>
     <div class="col-md-6">
       <p>Even numbers</p>
       <app-even *ngFor="let n of evenNumbers" [n]="n"></app-even>
     </div>
+    <div class="col-md-6">
+      <p>Odd numbers</p>
+      <app-odd *ngFor="let n of oddNumbers" [n]="n"></app-odd>
+    </div>
   </div>
-</div>-->
+</div>

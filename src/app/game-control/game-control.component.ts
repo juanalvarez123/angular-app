@@ -8,25 +8,31 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class GameControlComponent implements OnInit {
 
   @Output() sequenceEmiter = new EventEmitter();
-  private sequence: number = 0;
+  @Output() resetGame = new EventEmitter<void>();
+  private sequence: number = 1;
   private interval;
-  disableStartButton: boolean = false;
+  isGameRunning: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  startGame() {
-    this.disableStartButton = true;
+  onStartGame() {
+    this.isGameRunning = true;
     this.interval = setInterval(() => {
       this.sequenceEmiter.emit(this.sequence++);
     }, 1000);
   }
 
-  stopGame() {
-    this.disableStartButton = false;
+  onStopGame() {
+    this.isGameRunning = false;
     clearInterval(this.interval);
   }
 
+  onResetGame() {
+    this.sequence = 1;
+    this.onStopGame();
+    this.resetGame.emit();
+  }
 }

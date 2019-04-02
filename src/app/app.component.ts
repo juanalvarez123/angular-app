@@ -27,6 +27,11 @@ export class AppComponent {
     }
   }
 
+  onResetGame() {
+    this.oddNumbers = [];
+    this.evenNumbers = [];
+  }
+
   loadedFeature: string = 'recipe';
 
   onNavigate(feature: string) {
