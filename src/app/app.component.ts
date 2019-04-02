@@ -26,4 +26,10 @@ export class AppComponent {
       this.evenNumbers.push(sequence);
     }
   }
+
+  loadedFeature: string = 'recipe';
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 }
