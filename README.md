@@ -1,4 +1,6 @@
-# MyFirstApp
+# Angular App
+
+This is an example of how Angular works building a web page for recipes and a shopping-list items.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
 
