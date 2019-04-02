@@ -14,5 +14,16 @@ export class AppComponent {
 
   successTitle = "Success !";
   successMessage = 'This is a success message';
-  successClass = 'alert-success'
+  successClass = 'alert-success';
+
+  private oddNumbers: number[] = [];
+  private evenNumbers: number[] = [];
+
+  addSequence(sequence: number) {
+    if (sequence % 2 === 0) {
+      this.oddNumbers.push(sequence);
+    } else {
+      this.evenNumbers.push(sequence);
+    }
+  }
 }

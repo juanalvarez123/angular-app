@@ -19,6 +19,9 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { CockpitComponent } from './servers/cockpit/cockpit.component';
+import { GameControlComponent } from './game-control/game-control.component';
+import { OddComponent } from './game-control/odd/odd.component';
+import { EvenComponent } from './game-control/even/even.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { CockpitComponent } from './servers/cockpit/cockpit.component';
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    CockpitComponent
+    CockpitComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,

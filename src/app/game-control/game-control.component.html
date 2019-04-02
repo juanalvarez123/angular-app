@@ -1,0 +1,6 @@
+<div class="form-group row">
+  <div class="btn-group col-md-12">
+    <button class="btn btn-success" [disabled]="disableStartButton" (click)="startGame()">Start</button>
+    <button class="btn btn-danger" [disabled]="!disableStartButton" (click)="stopGame()">Stop</button>
+  </div>
+</div>
