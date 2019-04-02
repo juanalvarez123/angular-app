@@ -12,6 +12,7 @@ export class GameControlComponent implements OnInit {
   private sequence = 1;
   private interval;
   isGameRunning = false;
+  startAtLeastOnce = false;
 
   constructor() { }
 
@@ -20,6 +21,7 @@ export class GameControlComponent implements OnInit {
 
   onStartGame() {
     this.isGameRunning = true;
+    this.startAtLeastOnce = true;
     this.interval = setInterval(() => {
       this.sequenceEmiter.emit(this.sequence++);
     }, 1000);
@@ -31,6 +33,7 @@ export class GameControlComponent implements OnInit {
   }
 
   onResetGame() {
+    this.startAtLeastOnce = false;
     this.sequence = 1;
     this.onStopGame();
     this.resetGame.emit();

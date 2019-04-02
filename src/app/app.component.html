@@ -15,6 +15,13 @@
   </div>
 </div>-->
 <div class="container m-3">
+  <div class="">
+    <h4 appBasicHighlight>Game with basic highlight</h4>
+    <hr/>
+    <h4 appBetterHighlight>Game with better highlight 1</h4>
+    <hr/>
+    <h4 appBetterHighlight [defaultColor]="'green'">Game with better highlight 2</h4>
+  </div>
   <div class="form-group row">
     <div class="col-md-12">
       <app-game-control (sequenceEmiter)="addSequence($event)" (resetGame)="onResetGame()"></app-game-control>

@@ -2,6 +2,6 @@
   <div class="btn-group col-md-12">
     <button class="btn btn-success" [disabled]="isGameRunning" (click)="onStartGame()">Start</button>
     <button class="btn btn-danger" [disabled]="!isGameRunning" (click)="onStopGame()">Stop</button>
-    <button class="btn btn-secondary" [disabled]="!isGameRunning" (click)="onResetGame()">Reset</button>
+    <button class="btn btn-secondary" [disabled]="!startAtLeastOnce" (click)="onResetGame()">Reset</button>
   </div>
 </div>
