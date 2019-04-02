@@ -8,13 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'My first app';
 
-  warningTitle = "Warning !";
+  warningTitle = 'Warning !';
   warningMessage = 'This is a warning message';
   warningClass = 'alert-warning';
 
-  successTitle = "Success !";
+  successTitle = 'Success !';
   successMessage = 'This is a success message';
   successClass = 'alert-success';
+
+  loadedFeature = 'recipe';
 
   private oddNumbers: number[] = [];
   private evenNumbers: number[] = [];
@@ -32,7 +34,7 @@ export class AppComponent {
     this.evenNumbers = [];
   }
 
-  loadedFeature: string = 'recipe';
+
 
   onNavigate(feature: string) {
     this.loadedFeature = feature;

@@ -9,9 +9,9 @@ export class GameControlComponent implements OnInit {
 
   @Output() sequenceEmiter = new EventEmitter();
   @Output() resetGame = new EventEmitter<void>();
-  private sequence: number = 1;
+  private sequence = 1;
   private interval;
-  isGameRunning: boolean = false;
+  isGameRunning = false;
 
   constructor() { }
 
