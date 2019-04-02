@@ -1,6 +1,6 @@
 <div class="form-group row m-3">
   <div class="col-sm-12">
-    <app-shopping-edit></app-shopping-edit>
+    <app-shopping-edit (ingredientCreated)="ingredients.push($event)"></app-shopping-edit>
     <hr/>
     <ul class="list-group">
       <a
