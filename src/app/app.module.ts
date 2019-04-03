@@ -24,6 +24,7 @@ import { OddComponent } from './game-control/odd/odd.component';
 import { EvenComponent } from './game-control/even/even.component';
 import { BasicHighlightDirective } from './directives/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './directives/better-highlight/better-highlight.directive';
+import { DropdownDirective } from "./directives/dropdown/dropdown.directive";
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { BetterHighlightDirective } from './directives/better-highlight/better-h
     OddComponent,
     EvenComponent,
     BasicHighlightDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
