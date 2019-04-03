@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestFormComponent implements OnInit {
 
-  username: string = '';
+  username = '';
 
   constructor() { }
 

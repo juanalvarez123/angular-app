@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogComponent implements OnInit {
 
-  shouldShowDetails: boolean = false;
-  event: string = 'Display';
+  shouldShowDetails = false;
+  event = 'Display';
   logs: Array<string> = [];
 
   constructor() { }

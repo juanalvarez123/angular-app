@@ -3,9 +3,10 @@
     <button class="btn btn-success">New recipe</button>
   </div>
 </div>
-<hr />
+<hr/>
 <div class="form-group row">
   <div class="col-sm-12">
-    <app-recipe-item *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe-item>
+    <app-recipe-item *ngFor="let recipeElement of recipes" [recipe]="recipeElement"
+                     (recipeSelected)="onSelectedRecipe($event)"></app-recipe-item>
   </div>
 </div>

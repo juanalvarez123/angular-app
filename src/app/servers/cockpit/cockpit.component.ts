@@ -1,5 +1,5 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {Server} from "../../shared/server.model";
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Server } from '../../shared/server.model';
 
 @Component({
   selector: 'app-cockpit',

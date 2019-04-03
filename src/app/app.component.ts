@@ -8,11 +8,35 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'My first app';
 
-  warningTitle = "Warning !";
+  warningTitle = 'Warning !';
   warningMessage = 'This is a warning message';
   warningClass = 'alert-warning';
 
-  successTitle = "Success !";
+  successTitle = 'Success !';
   successMessage = 'This is a success message';
-  successClass = 'alert-success'
+  successClass = 'alert-success';
+
+  loadedFeature = 'recipe';
+
+  private oddNumbers: number[] = [];
+  private evenNumbers: number[] = [];
+
+  addSequence(sequence: number) {
+    if (sequence % 2 === 0) {
+      this.oddNumbers.push(sequence);
+    } else {
+      this.evenNumbers.push(sequence);
+    }
+  }
+
+  onResetGame() {
+    this.oddNumbers = [];
+    this.evenNumbers = [];
+  }
+
+
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 }

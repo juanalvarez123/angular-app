@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {Server} from "../shared/server.model";
+import { Component, OnInit } from '@angular/core';
+import { Server } from '../shared/server.model';
 
 @Component({
   selector: 'app-servers',
@@ -31,6 +31,6 @@ export class ServersComponent implements OnInit {
       name: serverData.name,
       content: serverData.content,
       status: serverData.status
-    })
+    });
   }
 }

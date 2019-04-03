@@ -1,5 +1,5 @@
-import {Component, Input, OnInit, ViewEncapsulation} from "@angular/core";
-import {Server} from "../../shared/server.model";
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Server } from '../../shared/server.model';
 
 @Component({
   selector: 'app-server-element',
