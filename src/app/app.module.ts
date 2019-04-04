@@ -25,6 +25,8 @@ import { EvenComponent } from './game-control/even/even.component';
 import { BasicHighlightDirective } from './directives/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './directives/better-highlight/better-highlight.directive';
 import { DropdownDirective } from "./directives/dropdown/dropdown.directive";
+import { ActiveUsersComponent } from "./active-users/active-users.component";
+import { InactiveUsersComponent } from "./inactive-users/inactive-users.component";
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { DropdownDirective } from "./directives/dropdown/dropdown.directive";
     EvenComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    DropdownDirective
+    DropdownDirective,
+    ActiveUsersComponent,
+    InactiveUsersComponent
   ],
   imports: [
     BrowserModule,
