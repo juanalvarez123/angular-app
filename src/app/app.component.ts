@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { UsersService } from "./services/users.service";
 
 @Component({
   selector: 'app-root',
@@ -21,8 +20,6 @@ export class AppComponent {
 
   private oddNumbers: number[] = [];
   private evenNumbers: number[] = [];
-
-  constructor(private usersService: UsersService) {}
 
   addSequence(sequence: number) {
     if (sequence % 2 === 0) {

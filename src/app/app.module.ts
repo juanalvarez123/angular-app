@@ -24,11 +24,11 @@ import { OddComponent } from './game-control/odd/odd.component';
 import { EvenComponent } from './game-control/even/even.component';
 import { BasicHighlightDirective } from './directives/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './directives/better-highlight/better-highlight.directive';
-import { DropdownDirective } from "./directives/dropdown/dropdown.directive";
-import { ActiveUsersComponent } from "./active-users/active-users.component";
-import { InactiveUsersComponent } from "./inactive-users/inactive-users.component";
-import { UsersService } from "./services/users.service";
-import { CounterService } from "./services/counter.service";
+import { DropdownDirective } from './directives/dropdown/dropdown.directive';
+import { ActiveUsersComponent } from './active-users/active-users.component';
+import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
+import { UserService } from './services/user.service';
+import { CounterService } from './services/counter.service';
 
 @NgModule({
   declarations: [
@@ -63,7 +63,7 @@ import { CounterService } from "./services/counter.service";
     FormsModule
   ],
   providers: [
-    UsersService,
+    UserService,
     CounterService
   ],
   bootstrap: [AppComponent]
