@@ -27,6 +27,8 @@ import { BetterHighlightDirective } from './directives/better-highlight/better-h
 import { DropdownDirective } from "./directives/dropdown/dropdown.directive";
 import { ActiveUsersComponent } from "./active-users/active-users.component";
 import { InactiveUsersComponent } from "./inactive-users/inactive-users.component";
+import { UsersService } from "./services/users.service";
+import { CounterService } from "./services/counter.service";
 
 @NgModule({
   declarations: [
@@ -60,7 +62,10 @@ import { InactiveUsersComponent } from "./inactive-users/inactive-users.componen
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    UsersService,
+    CounterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

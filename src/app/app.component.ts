@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsersService } from "./services/users.service";
 
 @Component({
   selector: 'app-root',
@@ -18,11 +19,10 @@ export class AppComponent {
 
   loadedFeature = 'recipe';
 
-  activeUsers = ['Max', 'Anna'];
-  inactiveUsers = ['Chris', 'Manu'];
-
   private oddNumbers: number[] = [];
   private evenNumbers: number[] = [];
+
+  constructor(private usersService: UsersService) {}
 
   addSequence(sequence: number) {
     if (sequence % 2 === 0) {
@@ -39,15 +39,5 @@ export class AppComponent {
 
   onNavigate(feature: string) {
     this.loadedFeature = feature;
-  }
-
-  onSetToInactive(id: number) {
-    this.inactiveUsers.push(this.activeUsers[id]);
-    this.activeUsers.splice(id, 1);
-  }
-
-  onSetToActive(id: number) {
-    this.activeUsers.push(this.inactiveUsers[id]);
-    this.inactiveUsers.splice(id, 1);
   }
 }
