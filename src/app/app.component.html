@@ -1,40 +1,87 @@
-<app-header (featureSelected)="onNavigate($event)"></app-header>
-<div class="container">
-  <div class="form-group row">
-    <div class="col-md-12">
-      <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
-      <app-shopping-list *ngIf="loadedFeature === 'shopping-list'"></app-shopping-list>
+<div class="container m-3">
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-recipes-tab" data-toggle="pill" href="#pills-recipes" role="tab"
+         aria-controls="pills-recipes" aria-selected="true">Recipes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-servers-tab" data-toggle="pill" href="#pills-servers" role="tab"
+         aria-controls="pills-servers" aria-selected="false">Servers</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-game-tab" data-toggle="pill" href="#pills-game" role="tab"
+         aria-controls="pills-game" aria-selected="false">Game</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-users-tab" data-toggle="pill" href="#pills-users" role="tab"
+         aria-controls="pills-users" aria-selected="false">Users</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-recipes" role="tabpanel" aria-labelledby="pills-recipes-tab">
+      <app-header (featureSelected)="onNavigate($event)"></app-header>
+      <div class="container">
+        <div class="form-group row">
+          <div class="col-md-12">
+            <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
+            <app-shopping-list *ngIf="loadedFeature === 'shopping-list'"></app-shopping-list>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="pills-servers" role="tabpanel" aria-labelledby="pills-servers-tab">
+      <div class="container">
+        <div class="form-group row">
+          <div class="col-md-12">
+            <app-servers></app-servers>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="pills-game" role="tabpanel" aria-labelledby="pills-game-tab">
+      <div class="container m-3">
+        <div class="">
+          <h4 appBasicHighlight>Game with basic highlight</h4>
+          <hr/>
+          <h4 appBetterHighlight>Game with better highlight 1</h4>
+          <hr/>
+          <h4 appBetterHighlight [defaultColor]="'green'">Game with better highlight 2</h4>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-12">
+            <app-game-control (sequenceEmiter)="addSequence($event)" (resetGame)="onResetGame()"></app-game-control>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-6">
+            <p>Even numbers</p>
+            <app-even *ngFor="let n of evenNumbers" [n]="n"></app-even>
+          </div>
+          <div class="col-md-6">
+            <p>Odd numbers</p>
+            <app-odd *ngFor="let n of oddNumbers" [n]="n"></app-odd>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="pills-users" role="tabpanel" aria-labelledby="pills-users-tab">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-8 col-md-offset-2">
+            <app-active-users
+              [users]="activeUsers"
+              (userSetToInactive)="onSetToInactive($event)"></app-active-users>
+            <app-inactive-users
+              [users]="inactiveUsers"
+              (userSetToActive)="onSetToActive($event)"></app-inactive-users>
+          </div>
+          <!--
+            Optimize this app by adding a UsersService which manages the active and inactive users.
+
+            Also add a CounterService which counts the number of active->inactive and inactive->active actions.
+          -->
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<!--<div class="container">
-  <div class="form-group row">
-    <div class="col-md-12">
-      <app-servers></app-servers>
-    </div>
-  </div>
-</div>-->
-<!--<div class="container m-3">
-  <div class="">
-    <h4 appBasicHighlight>Game with basic highlight</h4>
-    <hr/>
-    <h4 appBetterHighlight>Game with better highlight 1</h4>
-    <hr/>
-    <h4 appBetterHighlight [defaultColor]="'green'">Game with better highlight 2</h4>
-  </div>
-  <div class="form-group row">
-    <div class="col-md-12">
-      <app-game-control (sequenceEmiter)="addSequence($event)" (resetGame)="onResetGame()"></app-game-control>
-    </div>
-  </div>
-  <div class="form-group row">
-    <div class="col-md-6">
-      <p>Even numbers</p>
-      <app-even *ngFor="let n of evenNumbers" [n]="n"></app-even>
-    </div>
-    <div class="col-md-6">
-      <p>Odd numbers</p>
-      <app-odd *ngFor="let n of oddNumbers" [n]="n"></app-odd>
-    </div>
-  </div>
-</div>-->
