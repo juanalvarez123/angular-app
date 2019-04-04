@@ -1,5 +1,5 @@
-import { Injectable } from "@angular/core";
-import { CounterService } from "./counter.service";
+import { Injectable } from '@angular/core';
+import { CounterService } from './counter.service';
 
 @Injectable()
 export class UserService {

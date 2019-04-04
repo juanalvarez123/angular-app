@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Input, OnInit, Renderer2 } from "@angular/core";
+import { Directive, ElementRef, HostListener, Input, OnInit, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appDropdown]'
@@ -17,10 +17,10 @@ export class DropdownDirective implements OnInit {
   @HostListener('click') mouseclick(eventData: Event) {
     if (this.firstTime) {
       this.firstTime = false;
-      this.renderer.addClass(this.appDropdown, 'show')
+      this.renderer.addClass(this.appDropdown, 'show');
     } else {
       this.firstTime = true;
-      this.renderer.removeClass(this.appDropdown, 'show')
+      this.renderer.removeClass(this.appDropdown, 'show');
     }
   }
 }
