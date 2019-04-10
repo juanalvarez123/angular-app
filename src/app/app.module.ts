@@ -29,6 +29,8 @@ import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
 import { UserService } from './services/user.service';
 import { CounterService } from './services/counter.service';
+import { RecipeService } from './services/recipe.service';
+import { ShoppingListService } from './services/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -64,7 +66,9 @@ import { CounterService } from './services/counter.service';
   ],
   providers: [
     UserService,
-    CounterService
+    CounterService,
+    RecipeService,
+    ShoppingListService
   ],
   bootstrap: [AppComponent]
 })

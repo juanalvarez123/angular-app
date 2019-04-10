@@ -10,7 +10,7 @@
 </div>
 <div class="form-group row">
   <div class="col-md-12 btn-group">
-    <button href="#" class="btn btn-primary">To shoppong cart</button>
+    <button class="btn btn-primary" (click)="onSendIngredientsToShoppingList(recipe.ingredients)">To shoppong cart</button>
     &nbsp;
     <button href="#" class="btn btn-info">Edit</button>
     &nbsp;
@@ -24,6 +24,11 @@
 </div>
 <div class="form-group row">
   <div class="col-md-12">
-    Ingredients
+    <ul class="list-group">
+      <li class="list-group-item"
+          *ngFor="let ingredient of recipe.ingredients">
+        {{ ingredient.name }} - {{ ingredient.amount }}
+      </li>
+    </ul>
   </div>
 </div>
