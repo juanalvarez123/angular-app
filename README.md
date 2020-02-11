@@ -4,7 +4,22 @@ This is an example of how Angular works building a web page for recipes and a sh
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
 
-## Development server
+## Environment setup
+
+1. Install NodeJS: Download and install the LTS version from [https://nodejs.org/en/](https://nodejs.org/en/)
+
+2. Installing Angular CLI:
+
+```bash
+npm install -g angular-cli
+npm install -g @angular/cli@latest
+```
+
+## Install dependencies
+
+Run `npm install` to install npm dependencies.
+
+## Run application
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
